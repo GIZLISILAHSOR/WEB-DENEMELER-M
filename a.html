@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <style>
+        body{
+    background-color: bisque;
+    text-align: center;
+}
+#btn{
+    background-color: rgb(57, 57, 57);
+    color: aliceblue;
+    border-radius: 10%;
+    width: 100px;
+    height: 25px;
+    border-color: rgb(255, 255, 255);
+    border-style:outset;
+    font-style: italic;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 250px;
+    border: 0cm;
+}
+table{
+    background-color: black;
+    color: aliceblue;
+    border-color: bisque;
+    border-radius: 5%;
+}
+#cevap{
+    font-size: x-large;
+    font-style: oblique;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(217, 90, 90);
+}
+#btn:hover{
+    background-color: rgb(31, 31, 31);
+}
+.sayi{
+    color: rgb(43, 255, 1);
+    font-size: medium;
+    font-style: inherit;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.is{
+    background-color:darkgreen;
+    color: aliceblue;
+    font-size: large;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#secim{
+    background-color: rgb(73, 73, 74);
+    border-radius: 15%;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 250px;
+    border: 0cm;
+}
+#hesapbaslik{
+    font-size: small;
+    font-style: italic;
+    color: darkgreen;
+    font-family: Arial, Helvetica, sans-serif;
+}
+td{
+    border: 0cm;
+}
+    </style>
+    <table border="1px" align="center">
+        <tr>
+            <td colspan="2" align="center" id="hesapbaslik"><h1>HESAP MAKİNESİ</h1></td>
+        </tr>
+        <tr>
+            <td class="sayi">1.sayı</td>
+            <td><input type="number" class="is" id="s1"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <select name="" id="secim">
+                    <option value="secim yapiniz">secim yapiniz</option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="sayi">2.sayı</td>
+            <td><input type="number" id="s2" class="is"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="TIKLA" id="btn" ></td>
+        </tr>
+        <tr>
+            <td id="cevap" colspan="2">CEVAP</td>
+        </tr>
+    </table>
+    <script>
+        let btn=document.getElementById("btn");
+btn.onclick=function(e)
+{
+    let s1=document.getElementById("s1");
+    let s2=document.getElementById("s2");
+    let cevap=document.getElementById("cevap")
+    let secim=document.getElementById('secim')
+    if(secim.value == '-')
+        {
+            let cikarma= parseInt(s1.value)-parseInt(s2.value);
+            cevap.innerText=cikarma;
+        }
+    else if( secim.value == '+')
+        {
+            let toplama= parseInt(s1.value)+parseInt(s2.value);
+            cevap.innerText=toplama;
+        }
+     else if( secim.value == '*')
+        {
+            let toplama= parseInt(s1.value)*parseInt(s2.value);
+            cevap.innerText=toplama;
+        }
+     else if( secim.value == '/')
+        {
+            let toplama= parseInt(s1.value)/parseInt(s2.value);
+            cevap.innerText=toplama;
+        }
+    else if(secim.value == 'secim yapiniz')
+        {
+            cevap.innerText='secim yapsana';
+        }
+}
+    </script>
+    
+</body>
+</html>
