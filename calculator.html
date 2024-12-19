@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <link rel="stylesheet" href="calculator.css">
+    <table border="1px" align="center">
+        <tr>
+            <td colspan="2" align="center" id="hesapbaslik"><h1>HESAP MAKİNESİ</h1></td>
+        </tr>
+        <tr>
+            <td class="sayi">1.sayı</td>
+            <td><input type="number" class="is" id="s1"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <select name="" id="secim">
+                    <option value="secim yapiniz">secim yapiniz</option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="sayi">2.sayı</td>
+            <td><input type="number" id="s2" class="is"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="TIKLA" id="btn" ></td>
+        </tr>
+        <tr>
+            <td id="cevap" colspan="2">CEVAP</td>
+        </tr>
+    </table>
+    <script src="calculator.js"></script>
+</body>
+</html>
