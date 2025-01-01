@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="deneme" id="deneme"></div> 
+    <script>
+        const button=document.createElement("button");
+        button.className='but';
+        button.innerHTML="tıkla";
+        const baslik=document.createElement("h1");
+        baslik.className="bas";
+        baslik.innerHTML="denemem";
+        var deneme=document.getElementById("deneme");
+        deneme.appendChild(baslik);
+        deneme.appendChild(button);
+        button.onclick=function(e){
+            baslik.innerHTML="basarili";
+        }
+    </script>
+    <style>
+        .but{
+            background-color: aqua;
+            border-radius: 10px;
+            border-color:black;
+        }
+        .bas{
+            font-size: small;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: aliceblue;
+        }
+        body{
+            background-color: brown;
+        }
+    </style>
+</body>
+</html>
